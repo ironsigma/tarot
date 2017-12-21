@@ -1,0 +1,256 @@
+// Constants
+card-width = 120px
+card-height = card-width * 1.66
+card-spacing = 20px
+
+// Styles
+#card-layouts
+	margin-bottom: 20px
+
+.card-container:hover
+	z-index: 10
+
+.card-img
+	width: card-width
+
+.card-index
+	font-size: 10px
+	padding-right: 3px
+	color: #aaa
+	vertical-align: top
+
+.upsidedown-card
+	transform: rotate(180deg)
+
+.upsidedown-tapped-card
+	transform: rotate(-270deg) !important
+
+.xtooltip
+	display: none
+	position: absolute
+	border: 1px solid #333
+	background-color: #161616
+	border-radius: 5px
+	padding: 10px
+	color: #fff
+	font-family: Arial
+	font-size: 14px
+	z-index: 100
+	max-width: 600px
+
+// Functions
+tapped-card()
+	transform: rotate(-90deg)
+
+card-layout(w, h)
+	background-color: #303030
+	position: relative
+	width: w * (card-width + card-spacing) + 4 * card-spacing
+	height: h * (card-height + card-spacing) + 3 * card-spacing
+
+card-pos(x, y)
+	position: absolute
+	left: x * (card-width + card-spacing) + 2 * card-spacing
+	top: y * (card-height + card-spacing) + 2 * card-spacing
+
+// The Celtic Cross
+#the-celtic-cross-layout
+	card-layout(4.5, 4)
+
+#the-celtic-cross-card-1
+	card-pos(1.25, 1)
+
+#the-celtic-cross-card-2
+	card-pos(1.29, 1.2)
+	.card-img
+		tapped-card()
+
+#the-celtic-cross-card-3
+	card-pos(1.25, 0)
+
+#the-celtic-cross-card-4
+	card-pos(1.25, 2)
+
+#the-celtic-cross-card-5
+	card-pos(0, 1)
+
+#the-celtic-cross-card-6
+	card-pos(2.5, 1)
+
+#the-celtic-cross-card-7
+	card-pos(3.5, 3)
+
+#the-celtic-cross-card-8
+	card-pos(3.5, 2)
+
+#the-celtic-cross-card-9
+	card-pos(3.5, 1)
+
+#the-celtic-cross-card-10
+	card-pos(3.5, 0)
+
+// Cross layout
+#the-cross-layout
+	card-layout(3, 2)
+
+#the-cross-card-1
+	card-pos(0, 0.5)
+
+#the-cross-card-2
+	card-pos(2, 0.5)
+
+#the-cross-card-3
+	card-pos(1, 0)
+
+#the-cross-card-4
+	card-pos(1, 1)
+
+// The Blockade
+#the-blockade-layout
+	card-layout(3, 3.6)
+
+#the-blockade-card-1
+	card-pos(1, 1)
+
+#the-blockade-card-2
+	card-pos(0, 0)
+
+#the-blockade-card-3
+	card-pos(2, 0)
+
+#the-blockade-card-4
+	card-pos(1, 1.8)
+	.card-img
+		tapped-card()
+
+#the-blockade-card-5
+	card-pos(1, 2.6)
+
+// The Tree of life
+#the-tree-of-life-layout
+	card-layout(3, 5)
+
+#the-tree-of-life-card-1
+	card-pos(1, 0)
+
+#the-tree-of-life-card-2
+	card-pos(2, 0.5)
+
+#the-tree-of-life-card-3
+	card-pos(0, 0.5)
+
+#the-tree-of-life-card-4
+	card-pos(2, 1.5)
+
+#the-tree-of-life-card-5
+	card-pos(0, 1.5)
+
+#the-tree-of-life-card-6
+	card-pos(1, 2)
+
+#the-tree-of-life-card-7
+	card-pos(2, 2.5)
+
+#the-tree-of-life-card-8
+	card-pos(0, 2.5)
+
+#the-tree-of-life-card-9
+	card-pos(1, 3)
+
+#the-tree-of-life-card-10
+	card-pos(1, 4)
+
+// The Relationship
+#the-relationship-layout
+	card-layout(3.5, 3)
+
+#the-relationship-card-1
+	card-pos(1.25, 1)
+
+#the-relationship-card-2
+	card-pos(1.25, 1)
+	.card-img
+		tapped-card()
+
+#the-relationship-card-3
+	card-pos(2.5, 0)
+
+#the-relationship-card-4
+	card-pos(2.5, 1)
+
+#the-relationship-card-5
+	card-pos(2.5, 2)
+
+#the-relationship-card-6
+	card-pos(0, 2)
+
+#the-relationship-card-7
+	card-pos(0, 1)
+
+#the-relationship-card-8
+	card-pos(0, 0)
+
+// The Decision
+#the-decision-layout
+	card-layout(4, 4)
+
+#the-decision-card-1
+	card-pos(0, 1.5)
+
+#the-decision-card-2
+	card-pos(2, 0.5)
+
+#the-decision-card-3
+	card-pos(2, 2.5)
+
+#the-decision-card-4
+	card-pos(1, 1)
+
+#the-decision-card-5
+	card-pos(1, 2)
+
+#the-decision-card-6
+	card-pos(3, 0)
+
+#the-decision-card-7
+	card-pos(3, 3)
+
+// The Astrological Circle
+#the-astrological-circle-layout
+	card-layout(6.8, 5)
+
+#the-astrological-circle-card-1
+	card-pos(0.5, 2)
+
+#the-astrological-circle-card-2
+	card-pos(1, 3)
+
+#the-astrological-circle-card-3
+	card-pos(2, 3.5)
+
+#the-astrological-circle-card-4
+	card-pos(3, 4)
+
+#the-astrological-circle-card-5
+	card-pos(4, 3.5)
+
+#the-astrological-circle-card-6
+	card-pos(5, 3)
+
+#the-astrological-circle-card-7
+	card-pos(5.5, 2)
+
+#the-astrological-circle-card-8
+	card-pos(5, 1)
+
+#the-astrological-circle-card-9
+	card-pos(4, 0.5)
+
+#the-astrological-circle-card-10
+	card-pos(3, 0)
+
+#the-astrological-circle-card-11
+	card-pos(2, 0.5)
+
+#the-astrological-circle-card-12
+	card-pos(1, 1)
